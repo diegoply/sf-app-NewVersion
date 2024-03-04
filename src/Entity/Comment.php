@@ -19,6 +19,12 @@ class Comment
     #[ORM\Column]
     private ?int $raking = null;
 
+    #[ORM\ManyToOne(inversedBy: 'comments')]
+    private ?Recipe $recipe = null;
+
+    #[ORM\ManyToOne(inversedBy: 'comments')]
+    private ?User $contributor = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -44,6 +50,30 @@ class Comment
     public function setRaking(int $raking): static
     {
         $this->raking = $raking;
+
+        return $this;
+    }
+
+    public function getRecipe(): ?Recipe
+    {
+        return $this->recipe;
+    }
+
+    public function setRecipe(?Recipe $recipe): static
+    {
+        $this->recipe = $recipe;
+
+        return $this;
+    }
+
+    public function getContributor(): ?User
+    {
+        return $this->contributor;
+    }
+
+    public function setContributor(?User $contributor): static
+    {
+        $this->contributor = $contributor;
 
         return $this;
     }
