@@ -1,0 +1,35 @@
+---------------------
+
+
+
+* Recette (id, titre, contenu_recette, user_id?, date_creation) // relié à utilisateur et des commentaires
+
+* Commentaire (id, commentaire, note, user_id?, recette_id?) // reliée à la recette, et à un(e) utilisateur
+
+* Utilisateur (nom complet, email, password, role (utilisateur/admin)) lié aux recettes + capable de commenter
+
+
+
+Utilisateur 1 - n Recette => 1 utilisateur peut avoir plusieurs recettes, mais une recette n'a qu'un seul auteur
+Utilisateur 1 - n Commentaire
+
+
+Recette n - 1 Utilisateur
+Recette 1 - n Commentaire
+
+
+
+Utilisateur :
+
+=> possède des recettes
+=> poste des commentaires
+
+Recette :
+
+=> a un auteur
+=> a des commentaires
+
+Commentaire :
+
+<= appartient à une recette
+<= créé par un utilisateur
