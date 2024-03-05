@@ -48,3 +48,12 @@ when@prod:
                     adapter: cache.app
                 doctrine.system_cache_pool:
                     adapter: cache.system
+
+#doctrine:
+   # dbal:
+       # driver: 'pdo_mysql'
+       # host: 'localhost'
+       # dbname: 'SF-App3'
+       # user: 'root'
+       # password: ''
+      
